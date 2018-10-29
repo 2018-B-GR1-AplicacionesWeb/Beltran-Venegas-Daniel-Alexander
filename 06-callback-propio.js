@@ -45,3 +45,30 @@ appendFile('06-texto.txt',
 
     }
 );
+
+// promesa openfile
+nuevaPromesaOppen
+    .then(
+        (contenidoArchivo) => {
+            console.log('Todo bien', contenidoArchivo);
+            return nuevaPromesaOppen(contenidoArchivo)
+        }
+    )
+    .then(
+        (contenidoCompleto) => {
+            console.log('Contenido completo', contenidoCompleto);
+        }
+    )
+    .catch(
+        (resultadoError) => {
+            console.log('Algo malo paso', resultadoError);
+        }
+    );
+
+appendFile('06-texto.txt',
+    '\n Adios mundo',
+    () => {
+
+    }
+);
+
