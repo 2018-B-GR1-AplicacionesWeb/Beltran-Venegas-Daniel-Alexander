@@ -16,6 +16,7 @@ var arregloFunciones = [function () {// Anonymous function
 
 /* no se pueden usar funciones anonimas sin igualar o enviar como paraemtro
 function(a,b,c){
+
 }
 */
 
