@@ -1,0 +1,10 @@
+{
+  "nombre": "Adrian",
+  "edad": 29,
+  "sueldo": 12.2,
+  "casado": false,
+  "hijos": null,
+  "mascota": {
+    "nombre":"Cachetes"
+  }
+}

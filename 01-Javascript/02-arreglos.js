@@ -102,3 +102,4 @@ console.log(atributosDelObjeto);
 
 console.log(datosDelUsuario[atributosDelObjeto[0]]);
 
+
