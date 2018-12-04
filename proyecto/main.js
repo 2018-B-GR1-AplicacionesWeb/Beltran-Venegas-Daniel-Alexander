@@ -5,7 +5,7 @@ const mergeMap = require('rxjs/operators').mergeMap;
 const map = require('rxjs/operators').map;
 const preguntaMenu = {
     type: 'list',
-    name: 'opcionMenu',
+    name: 'Menu',
     message: 'Que quieres hacer',
     choices: [
         'Crear',
@@ -92,8 +92,8 @@ function main() {
         main();
     });
     /*
-    const respuesta = await inquirer.prompt(preguntaMenu);
-    switch (respuesta.opcionMenu) {
+    const respuesta = await inquirer.prompt(Menu1);
+    switch (respuesta.Menu) {
         case 'Crear':
 
             const respuestaUsuario = await inquirer.prompt(preguntaUsuario);
