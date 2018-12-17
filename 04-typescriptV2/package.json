@@ -1,0 +1,7 @@
+{
+  "name": "04-typescriptV2",
+  "version": "1.0.0",
+  "dependencies": {
+    "rxjs": "^6.3.3"
+  }
+}

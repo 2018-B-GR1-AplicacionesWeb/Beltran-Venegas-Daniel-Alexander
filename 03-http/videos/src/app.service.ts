@@ -1,16 +1,18 @@
-import {Injectable} from '@nestjs/common';
-import {Usuario} from './app.controller';
+import { Injectable } from '@nestjs/common';
+import {Usuario} from "./app.controller";
 
 @Injectable()
 export class AppService {
-    bdd: Usuario[] = [];   // ARCHIVO .JSON
+    bdd: Usuario[] = []; //Archivo JASON
+    /// DEBER en lugar de guardar aqui guardar en archivos ---->
 
-    crearUsuario(usuario: Usuario) {
+    crearUsuario(usuario:Usuario){
         this.bdd.push(usuario);
         return this.bdd;
     }
 
-    // CONVERTIRNOS EN UN CLIENTE -> HTTP GET FACEBOOK
-    // AXIOS
-    // MYSQL
+    // convertirnos en un cliente
+    //axios
+    //mysql
+
 }
