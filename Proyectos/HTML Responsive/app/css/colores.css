@@ -1,0 +1,50 @@
+
+.verde {
+    color: greenyellow;
+}
+
+.rojo {
+    color: red;
+}
+
+.azul {
+    color: blue;
+}
+
+.azul-hover {
+    color: aqua;
+}
+.gris{
+    color: #6c757d;
+}
+.blanco{
+    color: white;
+}
+.azul-hover:hover {
+    color: green;
+    cursor: pointer;
+}
+.azulU {
+    background-color: #2098D1;
+}
+.bg-azul{
+    background-color: blue;
+}
+
+.bg-verde{
+    background-color: green;
+}
+
+.bg-amarillo{
+    background-color: yellow;
+}
+
+.bg-rojo{
+    background-color: red;
+}
+.bg-cafe{
+    background-color: brown;
+}
+.bg-gris{
+    background-color: #aaaaaa;
+}

@@ -1,0 +1,61 @@
+<% const estaCreando = typeof participante === "undefined"%>
+
+<h1> <%= estaCreando ? 'Crear': 'Actualizar'%> participante </h1>
+
+<p><%= estaCreando ? 'Cree': 'Actualice'%> un participante</p>
+
+<form action="/participante/<%= estaCreando ? 'crear' : 'actualizar'%>-participante/<%= estaCreando ? '' : participante.id %>"
+      method="POST">
+
+    <div>
+        <label for="nombre">Nombre</label>
+        <input id="nombre"
+                name="nombre"
+                type="text"
+                value="<%= estaCreando ? '' : participante.nombre%>"
+        >
+    </div>
+
+    <div>
+        <label for="direccion">Direccion</label>
+        <input id="direccion"
+               name="direccion"
+               type="text"
+               value="<%= estaCreando ? '' : participante.direccion%>"
+        >
+    </div>
+
+    <div>
+        <label for="telefono">Telefono</label>
+        <input id="telefono"
+               name="telefono"
+               type="text"
+               value="<%= estaCreando ? '' : participante.telefono%>"
+        >
+    </div>
+
+    <div>
+        <label for="edad">Edad</label>
+        <input id="edad"
+               name="edad"
+               type="number"
+               value="<%= estaCreando ? '' : participante.edad%>"
+        >
+    </div>
+
+    <div>
+        <label for="talla">Talla</label>
+        <input id="talla"
+               name="talla"
+               type="text"
+               value="<%= estaCreando ? '' : participante.talla%>"
+        >
+    </div>
+
+    <button><%= estaCreando ? 'Crear': 'Actualizar'%> participante</button>
+
+</form>
+
+<a href="/participante/inicio">
+    <button>Regresar</button>
+</a>
