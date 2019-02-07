@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+
+      <nav class="nav nav-pills nav-justified">
+        <a class="nav-item nav-link active" href="http://localhost:3000/inicio">Inicio</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/register">Registrar usuario</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/login">Iniciar Sesión</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/addroles">Agregar Roles</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/tablausuariosconrol">Tabla de  Roles</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/tablaeventos">Tabla de  Eventos</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/registroSO">Registro de Sistema Operativo</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/registroAplicacion">Registro Aplicacion</a>
+      </nav>
+
+      <STYLE type="text/css">
+        h3 { 
+            text-align: center}
+       </STYLE>
+<h3>BIENVENIDO ADMNISTRADOR</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <br>
+            <br>
+            <br>
+            <table class="table">
+                <thead class="bg-primary">
+                    <tr>
+                        <th scope="col">Usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">id: <%= mensajeok.usuario_id%> </th>
+                    </tr>
+                    <tr>
+                        <td>Nombre : <%= mensajeok.nombre%></td>
+                    </tr>
+                    <tr>
+                        <td>correo : <%= mensajeok.correo%></td>
+                    </tr>
+                    <tr>
+                        <td>fecha nacimiento : <%= mensajeok.fecha_nacimiento%></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm">
+            <br>
+            <br>
+            <br>
+            <strong>Roles</strong>
+            <table class="table">
+                <thead class="bg-primary">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Rol</th>
+                        <th scope="col">Usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Administrador</td>
+                        <td><%= mensajeok.nombre%></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm">
+            <br>
+            <br>
+            <br>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Roles
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                <button type="button" class="btn btn-success">Añadir rol</button>
+            </div>
+        </div>
+    </div>

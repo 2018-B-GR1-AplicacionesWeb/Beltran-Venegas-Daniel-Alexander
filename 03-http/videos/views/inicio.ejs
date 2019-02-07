@@ -1,70 +1,144 @@
-<style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-</style>
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gestion de Noticias</title>
+    <link rel="stylesheet" href="/bootstrap/css/estilos-generales.css" >
+    <link rel="stylesheet" href="css/animate.css" >
 
 
-<!-- h1 -> header 1  -->
-<h1> <%= usuario %> </h1>
-<% var vicente = 'Vicente'; %>
-<!-- h2 -> header 2  -->
-<h2>  <%= vicente %>  </h2>
+</head>
+<body>
 
-<% if(booleano) { %>
-<!-- p -> parrafo  -->
-<p>Usted creo una noticia</p>
-<% } %>
+<div class="container">
 
-<!-- ul -> unordered list  -->
-<!-- ol -> ordered list  -->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
 
-<!-- a -> anchor -->
 
-<a href="/crear-noticia">
-    <button>Crear noticia</button>
-</a>
+    <% const existeMensaje = typeof mensaje !== "undefined" %>
+    <%if (existeMensaje){
 
-<form action="/inicio" method="get">
 
-    <label for="busqueda">Buscar</label>
-    <input  id="busqueda" type="text">
-</form>
-<table>
-    <!-- tr -> table row -->
-    <tr>
-        <!-- th -> table header -->
-        <th>Identicador</th>
-        <th>Nombre</th>
-        <th>Acciones</th>
-    </tr>
-    <!-- tr -> table row -->
-    <% arreglo.forEach( (noticia)=> { %>
-    <tr>
-        <!-- td -> table detail -->
-        <td><%= noticia.titulo %></td>
-        <td><%= noticia.descripcion %></td>
-        <td>
-            <form action="/eliminar/<%= noticia.id %>" method="POST">
-                <!--<button type="button"> clickea sin problemas</button>
-                <button>Yo tambien envio informacion</button>
-                -->
-                <button type="submit"> Eliminar</button>
-            </form>
-            <a href="/actualizar-noticia/<%= noticia.id %>">
+        <div
 
-                <button>actulizara</button>
+    }%>
+
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+    <% if(existeMensaje){ %>
+    <p>MENSAJE: <%= mensaje %></p>
+    <% } %>
+
+
+    <h1>Gestion de noticias</h1>
+
+    <p>Busque, cree actualice y elimine noticias. Puede buscar noticias por el titulo o la descripcion.</p>
+
+    <!-- ul -> unordered list  -->
+    <!-- ol -> ordered list  -->
+
+    <!-- a -> anchor -->
+
+    <form method="get" action="/noticia/inicio">
+
+        <div class="row">
+            <div class="col-sm-9">
+
+                <div class="form-group">
+
+                    <label for="busqueda">Busqueda</label>
+
+                    <input id="busqueda"
+                           type="text"
+                           name="busqueda"
+                           class="form-control">
+                </div>
+
+            </div>
+            <div class="col-sm-3">
+
+                <button
+                class="btn btn-outline-success btn-block">Buscar</button>
+
+            </div>
+        </div>
+    </form>
+
+    <div class="row">
+        <div class="col-sm-9">
+
+        </div>
+        <div class="col-sm-3">
+            <a href="/noticia/crear-noticia" class="quitar-link">
+
+                <button>Crear noticia</button>
             </a>
-        </td>
-    </tr>
-    <% }) %>
-</table>
+        </div>
+    </div>
+
+ <h2>lista de noticias</h2>
+    <P> Listado de las noticias, actualice o elimine las noticias.</P>
+
+    <table class="table table-hover">
+        <!-- tr -> table row -->
+
+        <thead>
+        <tr>
+            <th width="30%" >Titulo</th>
+            <th width="30%" >Descripcion</th>
+            <th width="30%" >Acciones</th>
+
+        </tr>
+        </thead>
+        <tr>
+            <!-- th -> table header -->
+            <th>Identicador</th>
+            <th>Nombre</th>
+            <th>Acciones</th>
+        </tr>
+        <!-- tr -> table row -->
+        <% arreglo.forEach( (noticia)=> { %>
+        <tr>
+            <!-- td -> table detail -->
+            <td><%= noticia.titulo %></td>
+            <td><%= noticia.descripcion %></td>
+            <td>
+                <form action="/noticia/eliminar/<%= noticia.id %>" method="POST">
+                    <!--<button type="button"> clickea sin problemas</button>
+                    <button>Yo tambien envio informacion</button>
+                    -->
 
 
-<script>
-    function imprimirEnConsola(evento) {
-        
-    }
-    
-</script>
+                    <button class="btn btn-outline-danger btn-block"type="submit"> Eliminar</button>
+                </form>
+                <a href="/noticia/actualizar-noticia/<%= noticia.id %>">
+                    <button>Actualizar</button>
+                </a>
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+
+
+    <script>
+        function imprimirEnConsola(evento){
+            evento.preventDefault();
+            console.log('ASDASDAS');
+        }
+    </script>
+</div>
+
+
+</body>
+</html>

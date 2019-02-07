@@ -1,108 +1,58 @@
-// Tipados Int edad = 1;
+//tpados int edad=1;
 
-var edad = 1; // number
-var sueldo = 1.01; // number
-var nombre = "Adrian"; // string
-var nombre = 'Adrian'; // string
-var nombre = `Adrian`; // string
-var casado = false; // boolean
-var hijos = null; // object
-var cuatroBrazos; // undefined
-var fecha = new Date(); // object
+var edad=1; //
+var sueldo=1.10;
+var nombre="javier";
+var name=`javier`;
+var casado= false;
+var gatos=null;//objeto
+var cuatroBRAZOS;//undefine
+var fecha=new Date();//object las clases no se pouede heredar
 
-console.log('fecha', fecha); // 2018..........
-console.log(typeof fecha); // object
-
-
-var adrianJSON = {
+console.log('fecha',fecha);
+console.log(typeof fecha);
+var javierJSON= {
     "nombre": "Adrian",
-    "edad": 29,
-    "sueldo": 12.2,
+    "edad": 12,
+    "sueldo": 203.4,
     "casado": false,
     "hijos": null,
-    "mascota": {
-        "nombre": "Cachetes"
+    "mascotas": {
+        "nombre": "max"
     }
-}; // object
-
-
-var adrian = {
-    'nombre': 'Adrian',
-    edad: 29,
-    sueldo: 12.2,
-    casado: false,
-    hijos: null,
-    deberes: undefined,
-    mascota: {
-        nombre: 'Cachetes'
+}//objeto
+var javier ={
+    'javier':'Javier',
+    edad:12,
+    sueldo:20.9,
+    casado:false,
+    hijos:null,
+    mascota:{
+        nombre:"cachetes"
     },
-}; // object
 
-console.log(adrian.nombre); // 'Adrian'
+};//objeto
 
+console.log(javier.nombre);
+//truthy
+//falsy
 if(true){
-    console.log("Si"); //
-} else{
-    console.log("No");
-}
+    console.log("si");
+}else{console.log("no");}
 
-
-if(false){
-    console.log("Si");
-} else{
-    console.log("No"); //
-}
-
-// truthy
-// falsy
-
-if(undefined){
-    console.log("Si");
-} else{
-    console.log("No"); // falsy
-}
-
-
-if(new Date()){
-    console.log("Si"); // truthy
-} else{
-    console.log("No");
-}
-
-
-if(null){
-    console.log("Si");
-} else{
-    console.log("No"); // falsy
-}
-
-
-if(0){
-    console.log("Si");
-} else{
-    console.log("No"); // falsy
-}
-
-if(-1){
-    console.log("Si"); // truthy
-} else{
-    console.log("No");
-}
-
-if(1){
-    console.log("Si"); //
-} else{
-    console.log("No");
-}
-
-
+//truthy (strings, 1, -1, numbers, object)
+//false  (0, null, undefined)
 if(""){
-    console.log("Si"); //
-} else{
-    console.log("No");
+    console.log("Si")
+}else {
+    console.log("no")
 }
-
-
-
-
-
+if (null){
+    console.log("si")
+} else {
+    console.log("no")
+}if (new Date()){
+    console.log("si");
+}else {
+    console.log("no")
+}

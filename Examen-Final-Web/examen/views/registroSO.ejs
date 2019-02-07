@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+
+<nav class="nav nav-pills nav-justified">
+        <a class="nav-item nav-link active" href="http://localhost:3000/inicio">Inicio</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/register">Registrar usuario</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/login">Iniciar Sesión</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/addroles">Agregar Roles</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/tablausuariosconrol">Tabla de  Roles</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/tablaeventos">Tabla de  Eventos</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/registroSO">Registro de Sistema Operativo</a>
+        <a class="nav-item nav-link" href="http://localhost:3000/registroAplicacion">Registro Aplicacion</a>
+</nav>
+
+<% const existeMensaje = typeof mensaje !== "undefined" %>
+<% if(existeMensaje){ %>
+<div class="alert alert-danger" role="alert">
+    <p>Error en el Ingreso</p>
+    <% mensaje.forEach( (mensajeerror)=> { %>
+    <span>
+        <%= Object.values(mensajeerror.constraints) %></span>
+    <br>
+    <% }) %>
+
+</div>
+<% } %>
+<% const existeMensajeok = typeof mensajeok !== "undefined" %>
+<% if(existeMensajeok){ %>
+<div class="alert alert-success" role="alert">
+    <p>Sistema operativo registrado con Éxito</p>
+    <span>
+        <%= Object.values(mensajeok)%> </span>
+
+</div>
+<% } %>
+<div class="container">
+    <form action="/sistemaoperativo/ingresoSO" method="POST">
+        <div class="row">
+            <div class="col-sm">
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <div class="clearfix">
+                        <h3>Ingreso sistema operativo</h3>
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingrese nombre">
+                        </div>
+                        <div class="form-group">
+                                <label for="versionapi">Version API</label>
+                                <input type="number" class="form-control" name="versionApi" id="versionApi" 
+                                    placeholder="Ingrese version de API">
+        
+                        </div>
+                        <div class="form-group">
+                                <label for="fechalanzamiento">Fecha lanzamiento</label>
+                                <input type="date" class="form-control" name="fechalanzamiento" value="2019-02-01">        
+        
+                        </div>
+                        <div class="form-group">
+                                <label for="pesoenGigas">Peso en gigas</label>
+                                <input type="number" class="form-control" name="pesoenGigas">        
+                        </div>
+                        <div class="form-group">
+                                <label for="Inputfechanacimiento">Instalado</label>
+                                <input type="checkbox" name="instalado" values="1"><br>
+                        </div>
+                        <div class="form-group">
+                                <button type="submit" class="btn btn-primary">GUARDAR</button>
+                        </div>
+                    </div>
+                    
+                </div>
+               
+            </div>
+            <div class="col-sm">
+                </div>
+            <form>
+        </div>

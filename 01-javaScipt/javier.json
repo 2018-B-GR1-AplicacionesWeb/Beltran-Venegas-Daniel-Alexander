@@ -1,0 +1,14 @@
+// definimos primero un objeto
+[
+  {
+    "nombre":"Javier",
+    "edad":12,
+    "sueldo":203.4,
+    "casado":null,
+    "mascotas":{
+      "nombre":"max"
+    }
+  }
+
+
+]
