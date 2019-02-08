@@ -32,7 +32,7 @@ export class AppController {
     res.render('register');
   }
   @Get('addroles')
-  LlamarVistao( 
+  LlamarVistaaddroles(
     @Res() res
     )
   {

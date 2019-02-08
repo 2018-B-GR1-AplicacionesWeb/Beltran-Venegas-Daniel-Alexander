@@ -25,11 +25,11 @@ export class RolService {
         const rolcreate: RolEntity = this._rolRepository
             .create(rol);
 
-        // Metodo Save Guarda en la BDD
+        // Metodo Save de guardado  en la BDD
         return this._rolRepository.save(rolcreate);
 
     }
-
+    // Metodo eliminar
     eliminar(rol_iddelete: number): Promise<RolEntity> {
 
         const rolEliminar: RolEntity = this._rolRepository
